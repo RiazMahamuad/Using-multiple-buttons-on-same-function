@@ -1,0 +1,77 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="/dist/output.css" rel="stylesheet">
+</head>
+<body style="background-color: #042C2D;">
+    <div class="container m-auto text-center flex items-center justify-center min-h-screen gap-1 flex-wrap absolute  ">
+        <button  id="btn1" class="t1  w-24 h-auto   items-center -mt-28 text-orange-500 rounded-lg   text-lg  shadow-[0px_0px_6px_0px_#1A202C] ">Button 1</button>
+        <button  id="btn1" class="t1  w-24 h-auto  items-center -mt-28 text-orange-500 rounded-lg  text-lg shadow-[0px_0px_6px_0px_#1A202C] ">Button 2</button>
+        <button  id="btn1" class="t1  w-24 h-auto  items-center -mt-28 text-orange-500 rounded-lg  text-lg  shadow-[0px_0px_6px_0px_#1A202C] ">Button 3</button>
+        <button  id="btn1" class="t1  w-24 h-auto  items-center -mt-28 text-orange-500 rounded-lg  text-lg  shadow-[0px_0px_6px_0px_#1A202C] ">Button 4</button>
+        <button  id="btn1" class="t1  w-24 h-auto  items-center -mt-28 text-orange-500 rounded-lg  text-lg  shadow-[0px_0px_6px_0px_#1A202C]">Button 5</button>
+        <button  id="btn1" class="t1  w-24 h-auto  items-center -mt-28 text-orange-500 rounded-lg  text-lg  shadow-[0px_0px_6px_0px_#1A202C] ">Button 6</button>
+        <button  id="btn1" class="t1  w-24 h-auto  items-center -mt-28 text-orange-500 rounded-lg  text-lg  shadow-[0px_0px_6px_0px_#1A202C] ">Button 7</button>
+        <button  id="btn1" class="t1  w-24 h-auto  items-center -mt-28 text-orange-500 rounded-lg  text-lg  shadow-[0px_0px_6px_0px_#1A202C]">Button 8</button>
+        <button  id="btn1" class="t1  w-24 h-auto  items-center -mt-28 text-orange-500 rounded-lg  text-lg  shadow-[0px_0px_6px_0px_#1A202C]">Button 9</button>
+        <button  id="btn1" class="t1  w-24 h-auto  items-center -mt-28 text-orange-500 rounded-lg  text-lg  shadow-[0px_0px_6px_0px_#1A202C]">Button 10</button>
+        
+    </div>
+    <div class="simpleModel hidden w-56 h-40 bg-gray-500 border border-orange-500 rounded-lg  justify-center relative m-auto mt-20 ">
+        <span class="close-icon float-right -mt-2 p-1  hover:text-white  cursor-pointer" onclick="closeModal()">&times;</span><br>
+        <input class=" rounded-full flex h-8 m-auto border p-2 border-orange-500 bg-gray-700 outline-none text-white "style="caret-color: orange; "><br>
+        <input class=" rounded-full flex h-8 m-auto  border p-2 border-orange-500 bg-gray-700 outline-none text-white"style="caret-color: orange;"><br>
+        <button class="bg-gray-700 w-40 h-9 rounded-lg border border-orange-500 text-center justify-center flex m-auto items-center text-orange-500">Submit</button>
+    </div>
+    <style>
+         @keyframes modalFadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(-20px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            .simpleModel {
+                animation: modalFadeIn 0.3s ease-out;
+            }
+    </style>
+    
+    <script>
+
+        const btn=document.querySelectorAll('.t1');
+        var MyModel=document.querySelectorAll('.simpleModel');
+
+        function AnyButtonClick (event){ 
+            MyModel.forEach(model =>{
+                model.style.display="block";
+             
+            });
+         }
+         function closeModal(){
+            MyModel.forEach(model =>{
+                model.style.display="none";
+                
+            });
+         }
+        btn.forEach(b=> {
+            b.addEventListener('click', AnyButtonClick);
+        });
+      
+
+     
+       
+    </script>
+</body>
+</html> 
+
+
